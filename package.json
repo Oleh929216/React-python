@@ -31,13 +31,13 @@
   },
   "homepage": "https://github.com/elilambnz/react-py#readme",
   "devDependencies": {
-    "@types/react": "^18.0.32",
+    "@types/react": "^19.0.8",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "eslint": "^8.29.0",
     "prettier": "^2.8.1",
     "pyodide": "^0.26.2",
-    "react": "^18.2.0",
+    "react": "^19.0.0",
     "react-dom": "^18.2.0",
     "standard-version": "^9.3.1",
     "typescript": "^5.0.3"
