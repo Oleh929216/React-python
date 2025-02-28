@@ -3,7 +3,7 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      maxWidth: {
+      maxWidth: { 
         '80ch': '80ch'
       }
     }
