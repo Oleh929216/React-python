@@ -5,7 +5,7 @@ import {
   useMemo,
   useRef,
   useState
-} from 'react'
+} from 'react' 
 import { PythonContext, suppressedMessages } from '../providers/PythonProvider'
 import { proxy, Remote, wrap } from 'comlink'
 import useFilesystem from './useFilesystem'
@@ -13,8 +13,8 @@ import useFilesystem from './useFilesystem'
 import { Packages } from '../types/Packages'
 import { PythonRunner } from '../types/Runner'
 
-interface UsePythonProps {
-  packages?: Packages
+interface UsePythonProps { 
+  packages?: Packages 
 }
 
 export default function usePython(props?: UsePythonProps) {
