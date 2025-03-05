@@ -18,7 +18,7 @@ export const suppressedMessages = ['Python initialization complete']
 
 interface PythonProviderProps {
   packages?: Packages
-  timeout?: number
+  timeout?: number 
   lazy?: boolean
   terminateOnCompletion?: boolean
   autoImportPackages?: boolean
@@ -47,7 +47,7 @@ function PythonProvider(props: PythonProviderProps) {
   useEffect(() => {
     const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
-        try {
+        try { 
           const url = new URL('../workers/service-worker', import.meta.url)
           const registration = await navigator.serviceWorker.register(url)
           if (registration.active) {
