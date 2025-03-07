@@ -23,28 +23,28 @@ addEventListener('message', (event) => {
     const resolver = resolverArray.shift() // Take the first promise in the array
     resolver(new Response(event.data.value, { status: 200 }))
   }
-})
+})   
 
-addEventListener('fetch', (event) => {
+addEventListener('fetch', (event) => {  
   const url = new URL(event.request.url)
 
   if (url.pathname === '/react-py-get-input/') {
     const id = url.searchParams.get('id')
     const prompt = url.searchParams.get('prompt')
 
-    event.waitUntil(
+    event.waitUntil(  
       (async () => {
         // Send REACT_PY_AWAITING_INPUT message to all window clients
         self.clients.matchAll().then((clients) => {
-          clients.forEach((client) => {
+          clients.forEach((client) => {  
             if (client.type === 'window') {
               client.postMessage({
                 type: 'REACT_PY_AWAITING_INPUT',
                 id,
-                prompt
+                prompt  
               })
             }
-          })
+          })  
         })
 
         // Does not match the window in Safari

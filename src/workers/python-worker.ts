@@ -6,27 +6,27 @@ import { loadPyodide as loadPyodideType, PyodideInterface } from 'pyodide'
 declare global {
   interface Window {
     loadPyodide: typeof loadPyodideType
-    pyodide: PyodideInterface
+    pyodide: PyodideInterface  
   }
-}
+}   
 
 // Monkey patch console.log to prevent the script from outputting logs
 if (self.location.hostname !== 'localhost') {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function  
+  console.log = () => {}  
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  console.log = () => {}
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  console.error = () => {}
+  console.error = () => {}  
 }
 
-let pythonConsole: {
+let pythonConsole: {  
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  reprShorten: any
+  reprShorten: any  
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  awaitFut: (fut: unknown) => any
+  awaitFut: (fut: unknown) => any  
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  pyconsole: any
+  pyconsole: any  
   clearConsole: () => void
-}
+}  
 
 const reactPyModule = {
   getInput: (id: string, prompt: string) => {
